@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fahrenheit and Celsius counter</title>
+</head>
+<body>
+
+	<div id="displayer"></div>
+
+	<script type="text/javascript">
+		
+		var celsius=60;
+		var fahrenheit=45;
+
+		document.getElementById('displayer').innerHTML="60°C = " + cTof(celsius)+"°F<br>45°F = " + fToc(fahrenheit)+"°C";
+		
+
+		function cTof(celsius){
+			return (celsius*1.8)+32;
+		}
+
+		function fToc(fahrenheit){
+			return (fahrenheit-32)/1.8;
+		}
+
+	</script>
+
+</body>
+</html>
