@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>creating user define variable</title>
+</head>
+<body>
+
+	<input type="text" name="variableDefine" id="variableDefine">
+	<button onclick="createVar()">Commit</button>
+
+	<script type="text/javascript">
+		function createVar(){
+			var variableName = document.getElementById('variableDefine').value;
+			this[variableName]="This message become from variable defined from user";
+			alert("Variable named " + variableName + " is created. Value of this variable: " + this[variableName]);
+		}
+	</script>
+
+</body>
+</html>
