@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>days to Christmass</title>
+</head>
+<body>
+
+	Days to Christmas:	
+	<div id="answer"></div>
+
+	<script type="text/javascript">
+		
+		var currentDate = new Date();
+		var currentYear = currentDate.getFullYear();
+		console.log("year present: "+currentYear);
+
+		var christmasDate = new Date(currentYear, 11, 24);
+		console.log("near Christamst date: "+ christmasDate);
+
+		var daysToChristmas = Math.abs(christmasDate - currentDate)/(1000*60*60*24);		
+
+		document.getElementById("answer").innerHTML=daysToChristmas.toFixed(0);  
+
+
+
+		
+	</script>
+
+</body>
+</html>
