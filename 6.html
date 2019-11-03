@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Length of years</title>
+</head>
+<body>
+
+	Choose the year between 1971 and 2050.<br>
+
+	<input type="text" name="year" id="yearIn">
+	<button onclick="checkYear()">Check</button>
+	<div id="answer"></div>
+
+	<script type="text/javascript">
+		function checkYear(){
+			var inputYear=document.getElementById("yearIn").value;
+			var inputYearInt=parseInt(inputYear)+1;
+			var inputYearString=String(inputYearInt);
+			
+			var yearsBefore=String(inputYear);
+
+			if((inputYear>=1971)&&(inputYear<=2050)){
+
+				var choosedYear = new Date(inputYearString);	
+				var yearsBeforeDate = new Date(yearsBefore);
+
+				var choosedYearMs=choosedYear.getTime();
+				var yearBeforeMs=yearsBeforeDate.getTime();
+
+				var daysChoosedYear=msToDays(choosedYearMs);
+				var daysbeforeYear=msToDays(yearBeforeMs);	
+
+				var days=daysChoosedYear - daysbeforeYear;
+
+				document.getElementById("answer").innerHTML="Year "+inputYear+" hat "+days+" days";		
+			}
+
+			else{
+				alert("Wrong year choosed!");
+			}
+		}
+
+		function msToDays(year) {			
+			var days=year/1000/60/60/24;			
+			return days;
+		}
+		
+	</script>
+
+</body>
+</html>
