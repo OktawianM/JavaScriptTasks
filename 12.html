@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>getting  URL address</title>
+</head>
+<body>
+
+	<button onclick="getURLaddr()">Get URL address</button>
+	<div id="displayer"></div>
+
+	<script type="text/javascript">
+
+		function getURLaddr(){
+			var address = document.URL;
+			document.getElementById('displayer').innerHTML="Your curent URL address is: "+address;	
+		}
+		
+	</script>
+
+</body>
+</html>
