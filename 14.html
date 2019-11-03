@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>extracting extension</title>
+</head>
+<body>
+	<label>Choose one of the files below please.</label><br>
+	<input type="checkbox" id="myCheck1" value="index.php" onchange="deactivator(2,3,1)">index.php<br>
+	<input type="checkbox" id="myCheck2" value="style.css" onchange="deactivator(1,3,2)">style.css<br>
+	<input type="checkbox" id="myCheck3" value="file.jar"onchange="deactivator(1,2,3)">file.jar<br>
+
+	<button onclick="isCheck()" style="margin-top: 50px;">Check Checkbox</button>
+
+	<script>
+
+	function  deactivator(valToOut1, valToOut2, valToOut3){
+
+		var deactivateVal1 = "myCheck"+valToOut1;
+		var deactivateVal2 = "myCheck"+valToOut2;
+		var activeVal3 = "myCheck"+valToOut3;
+		
+		if(document.getElementById(activeVal3).checked == true){
+			document.getElementById(deactivateVal1).disabled=true;
+			document.getElementById(deactivateVal2).disabled=true;
+		}
+
+		else if(document.getElementById(activeVal3).checked == false){
+			document.getElementById(deactivateVal1).disabled=false;
+			document.getElementById(deactivateVal2).disabled=false;
+		}
+	}
+
+	function isCheck() {
+	  if(document.getElementById("myCheck1").checked == true){
+	  	var value1 = document.getElementById("myCheck1").value;
+	  	getExtension(value1);	  	
+	  }
+
+	  else if(document.getElementById("myCheck2").checked == true){
+	  	var value2 = document.getElementById("myCheck2").value;
+	  	getExtension(value2);	  	
+	  }
+
+	  else if(document.getElementById("myCheck3").checked == true){
+	  	var value3 = document.getElementById("myCheck3").value;
+	  	getExtension(value3);	  	
+	  }
+
+	  else{"ERROR 1. No file to display"};
+	}
+
+	function getExtension(val){
+		var lengthVal = val.length;
+	  	var dotSearcher = val.indexOf(".");
+	  	var extension = val.slice(dotSearcher,lengthVal);
+	  	console.log(extension);
+	}
+
+	
+	</script>
+
+</body>
+</html>
+
+
+
