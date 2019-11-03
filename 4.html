@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Triangle area</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	Trianagle area with side lengths 5,6,7 is:
+	<div id="area"></div>
+
+	<script>
+		var circuit=(5+6+7)/2;
+		var area=Math.sqrt(circuit*(circuit-5)*(circuit-6)*(circuit-7));
+
+		document.getElementById('area').innerHTML=area;		
+	</script>
+
+</body>
+</html>
