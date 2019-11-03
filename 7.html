@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>finding 1st January is being a Sunday 2014-2050</title>
+</head>
+<body>
+
+	Sunday 1st January dates:<br>
+	<div id="displayer"></div>
+
+	<script type="text/javascript">
+
+		var dates='';
+
+		for(i=2014;i<=2050;i++){
+			var date=new Date(String(i)+"-01");
+			if(date.getDay()==6){
+				dates=dates+date+"<br>";
+				document.getElementById('displayer').innerHTML=dates;
+			}
+		}
+
+	</script>
+
+</body>
+</html>
