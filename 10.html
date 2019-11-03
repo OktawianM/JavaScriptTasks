@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>divide/multiply</title>
+</head>
+<body>
+
+	Enter two digits please.<br>
+
+	<label>First digit:</label> <br>
+	<input type="number" name="firstDigit" id="firstDigit"><br>
+
+	<label>Second digit:</label> <br>
+	<input type="number" name="secondDigit" id="secondDigit"><br>
+
+	<button onclick="mulitiplyFunction()">Multiply</button>
+	<button onclick="divideFunction()">Divide</button>
+
+	<div id="displayer"></div>
+
+	<script type="text/javascript">
+
+		function mulitiplyFunction(){
+
+			var firstDigit=document.getElementById('firstDigit').value;
+			var secondDigit=document.getElementById('secondDigit').value;
+			var result = firstDigit*secondDigit;
+
+			document.getElementById("displayer").innerHTML=result;
+		}
+
+		function divideFunction(){
+
+			var firstDigit=document.getElementById('firstDigit').value;
+			var secondDigit=document.getElementById('secondDigit').value;
+			var result = firstDigit/secondDigit;
+
+			document.getElementById("displayer").innerHTML=result;
+		}
+
+
+	</script>
+
+</body>
+</html>
