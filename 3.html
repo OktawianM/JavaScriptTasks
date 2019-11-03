@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Date diplayer</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<div id="dateDisplayer"></div>
+
+	<script>
+		var date = new Date();
+		var year = date.getFullYear();
+		var month = date.getMonth()+1;
+		var day = date.getDate();
+
+		document.getElementById('dateDisplayer').innerHTML=year+"/"+month+"/"+day;
+		
+	</script>
+
+</body>
+</html>
