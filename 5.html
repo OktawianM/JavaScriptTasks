@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>string rotate</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<div id="word"></div>
+
+	<script>
+		var wordToRotate='w3resource';
+		var splitString = wordToRotate.split("");
+	    var reverseArray = splitString.reverse();
+	    var lengthOfArr = reverseArray.length;
+	    var first = reverseArray[lengthOfArr-1],
+	    	last = reverseArray[0];
+
+	    	reverseArray[0]=first;
+	    	reverseArray[lengthOfArr-1]=last;
+
+	    var reversedWord = reverseArray.join("");
+	    		
+		document.getElementById('word').innerHTML=reversedWord;		
+	</script>
+
+</body>
+</html>
