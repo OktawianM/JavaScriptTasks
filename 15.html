@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>difference counter</title>
+	<meta name="description" content="Program to get the difference between a given number and 13, if the number is greater than 13 return double the absolute difference">
+</head>
+<body>
+
+	<label>Choose number to count the difference between your digit and 13</label><br>
+	<input type="number" name="inputDigit" id="inputDigit">
+	<button onclick="countDifference()">Count</button>
+
+	<div id="displayer"></div>
+
+	<script type="text/javascript">
+		function countDifference(){
+			var inputedDigit = document.getElementById('inputDigit').value;
+			var difference=0;
+
+			if(inputedDigit>13){
+				difference =  (inputedDigit-13)*2;
+				document.getElementById("displayer").innerHTML="Double differece between " + inputedDigit + " and 13 =  "+difference;
+			}
+
+			else if(inputedDigit<13){
+				difference = 13 - inputedDigit;
+				document.getElementById("displayer").innerHTML="Differece between " + inputedDigit + " and 13 =  "+difference;
+			}
+
+			else{document.getElementById("displayer").innerHTML="Differece = 0"};
+		}
+	</script>
+
+</body>
+</html>
