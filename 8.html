@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Length of years</title>
+</head>
+<body>
+
+	Choose the nuber between 0-10<br>
+
+	<input type="number" name="number" id="numberIn">
+	<button onclick="checkNum()">Check</button>
+	<div id="answer"></div>
+
+	<script type="text/javascript">
+		function checkNum(){
+			var inputNumber=document.getElementById("numberIn").value;
+			var randNumber=Math.floor(Math.random() * 11); 
+			
+			if(inputNumber==randNumber){
+				
+				document.getElementById("answer").innerHTML="Very good! The number you have chosen is the same as the number drawn by the computer.";	
+				console.log("Randnumber = " + randNumber);
+				console.log("Randnumber = " + inputNumber);
+
+			}
+
+			else{
+				document.getElementById("answer").innerHTML="The number you have chosen is not the same as the number drawn by the computer. Try again.";
+				console.log("Randnumber = " + randNumber);
+				console.log("Choosed number= " + inputNumber);
+			}
+		}
+
+		function msToDays(year) {			
+			var days=year/1000/60/60/24;			
+			return days;
+		}
+		
+	</script>
+
+</body>
+</html>
