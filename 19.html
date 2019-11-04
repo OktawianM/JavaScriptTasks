@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>check number within</title>
+	<meta name="description" content="Program to check a given integer is between 0-100 and 200-400">
+</head>
+<body>
+
+	<label>Please enter one digit to check</label>
+	<input type="number" name="digit" id="digit" onchange="checkNumber()">
+	<div id="displayer"></div>
+
+	<script type="text/javascript">
+		function checkNumber(){
+			var inputDigit = document.getElementById('digit').value;
+
+		if((inputDigit<=100)&&(inputDigit>=0)){
+			document.getElementById('displayer').innerHTML= "The number entered is in the range 0 - 100"
+		}
+
+		else if((inputDigit<=400)&&(inputDigit>=200)){
+			document.getElementById('displayer').innerHTML= "The number entered is in the range 200 - 400"
+		}
+
+		else{
+			document.getElementById('displayer').innerHTML= "The number entered is not within any of the ranges"
+		}
+	}
+	</script>
+
+</body>
+</html>
+
+
