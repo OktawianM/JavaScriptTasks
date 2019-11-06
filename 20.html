@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>check number sign</title>
+	<meta name="description" content="Program to check a given integer is bigger or smaller than zero">
+</head>
+<body>
+
+	<label>Please enter one digit to check</label>
+	<input type="number" name="digit" id="digit" onchange="checkNumber()">
+	<div id="displayer"></div>
+
+	<script type="text/javascript">
+		function checkNumber(){
+			var inputDigit = document.getElementById('digit').value;
+
+		if(inputDigit>0){
+			document.getElementById('displayer').innerHTML= "The number entered is greater than zero"
+		}
+
+		else if(inputDigit<0){
+			document.getElementById('displayer').innerHTML= "The number entered is smaller than zero"
+		}
+
+		else{
+			document.getElementById('displayer').innerHTML= "The number entered is equation 0"
+		}
+	}
+	</script>
+
+</body>
+</html>
+
+
