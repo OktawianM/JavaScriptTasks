@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>adding letters to string</title>
+	<meta name="description" content="Program to create a new string adding 'Py' in front of a given string. If the given string begins with 'Py' then return the original string">
+</head>
+<body>
+
+	<label>Please enter string to modify</label>
+	<input type="string" name="inputString" id="inputString" onchange="addLetters()">
+	<div id="displayer"></div>
+
+	<script type="text/javascript">
+		function addLetters(){
+			var inputedString = document.getElementById('inputString').value;
+			var modyfiedString = "Py"+inputedString;
+
+		
+			document.getElementById('displayer').innerHTML= "Modyfied string: " + modyfiedString;
+		
+	};
+	</script>
+
+</body>
+</html>
+
+
