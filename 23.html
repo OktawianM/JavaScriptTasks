@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Replace first and last character</title>
+	<meta name="description" content="Program to create a new string from a given string changing the position of first and last characters. The string length must be greater than or equal to 1">
+</head>
+<body>
+
+	<label>Please enter the word to change</label>
+	<input type="string" name="strIn" id="strIn">
+	<button onclick="changeCharacters()">Change</button>
+	<div id="displayer"></div>
+
+	<script type="text/javascript">
+		function changeCharacters(){
+			var wordToRotate = document.getElementById('strIn').value;			
+
+			if(wordToRotate.length<=1){
+				document.getElementById('displayer').innerHTML= "To short word! Try again";
+			}
+
+			else{
+
+				var splitString = wordToRotate.split("");		   
+			    var lengthOfArr = splitString.length;
+			    var first = splitString[lengthOfArr-1],
+			    	last = splitString[0];
+
+			    	splitString[0]=first;
+			    	splitString[lengthOfArr-1]=last;
+
+			    var reversedWord = splitString.join("");
+
+				document.getElementById('displayer').innerHTML= "Modyfied word: " + reversedWord;
+			};			
+		};
+
+	</script>
+
+
+</body>
+</html>
