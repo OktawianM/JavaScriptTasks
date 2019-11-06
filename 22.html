@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>removing letters from string</title>
+	<meta name="description" content="Program to remove a character at the specified position of a given string and return the new string">
+</head>
+<body>
+
+	<label id="labelFirst">Please enter string to modify</label><br>
+	<input type="string" name="inputString" id="inputString" onchange="getString()"><br>
+	<div id="displayer1"></div>
+
+	<input type="number" name="nrToDel" id="nrToDel" onchange="removeLetter()" style="visibility: hidden;"><br>
+	<div id="displayer2"></div>
+
+	<script type="text/javascript">
+
+		var inputedString = 0;
+
+		function getString(){
+			inputedString = document.getElementById('inputString').value;
+			document.getElementById('displayer1').innerHTML= "Inputed string: " + inputedString + "<br><br>Which letter do you want to delete?" ;		
+			document.getElementById('nrToDel').style.visibility="visible";
+		};
+
+		function removeLetter(){
+			var indexOfLetterToDel = document.getElementById('nrToDel').value;			
+			var splitStringArr = inputedString.split("");		    
+		    var lengthOfArr = inputedString.length;
+		    splitStringArr.splice(indexOfLetterToDel-1,1);
+		    var newString = splitStringArr.join('');
+		    
+		    document.getElementById('displayer2').innerHTML= "<br>RESULT = " + newString;	
+			
+		};
+		</script>
+
+</body>
+</html>
+
+
