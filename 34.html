@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Range checking</title>
+	<meta name="description" content="Program to find the larger number from the two given positive integers, the two numbers are in the range 40..60 inclusive.">
+</head>
+<body>
+
+	<label>Please insert two integers to check</label><br>
+	<input type="number" name="no1" id="number1"><br>
+	<input type="number" name="no2" id="number2"><br>
+	<button onclick="sendNumbers()">Check</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">
+		function sendNumbers(){
+			var value1 = parseInt(document.getElementById('number1').value);
+			var value2 = parseInt(document.getElementById('number2').value);
+
+			if((value1>=40&&value1<=60)&&(value2>=40&&value2<=60)){
+				if(value1>value2){
+					document.getElementById("displayer").innerHTML = "<br>" + value1 + " is bigger value.";
+				}
+				else if(value1<value2){
+					document.getElementById("displayer").innerHTML = "<br>" + value2 + " is bigger value.";
+				}
+				else{
+					document.getElementById("displayer").innerHTML = "<br> Same values.";
+				}
+				
+			}
+			
+			else{
+				document.getElementById("displayer").innerHTML = "<br> At least one of inserted integer is out of range 40-60";
+			}		
+		}
+	</script>
+
+</body>
+</html>
