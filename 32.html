@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Finding nearest number</title>
+	<meta name="description" content="Program to find a value which is nearest to 100 from two different given integer values">
+</head>
+<body>
+
+	<label>Please insert two integers to check</label><br>
+	<input type="number" name="no1" id="number1"><br>
+	<input type="number" name="no2" id="number2"><br>
+	<button onclick="sendNumbers()">Check</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">
+		function sendNumbers(){
+			var value1 = parseInt(document.getElementById('number1').value);
+			var value2 = parseInt(document.getElementById('number2').value);
+
+			var diference1 = Math.abs(100 - value1);
+			var diference2 = Math.abs(100 - value2);
+
+			if(diference1>diference2){
+				document.getElementById("displayer").innerHTML = "<br> Nearest inserted integer to 100 is: " + value2;
+			}
+
+			else if(diference2>diference1){
+				document.getElementById("displayer").innerHTML = "<br> Nearest inserted integer to 100 is: " + value1;
+			}
+			
+			else{
+				document.getElementById("displayer").innerHTML = "<br> Both inserted integer are same near to 100";
+			}		
+		}
+	</script>
+
+</body>
+</html>
