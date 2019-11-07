@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Range checking</title>
+	<meta name="description" content="Program to check if two numbers are in range 40..60 or in the range 70..100 inclusive.">
+</head>
+<body>
+
+	<label>Please insert two integers to check</label><br>
+	<input type="number" name="no1" id="number1"><br>
+	<input type="number" name="no2" id="number2"><br>
+	<button onclick="sendNumbers()">Check</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">
+		function sendNumbers(){
+			var value1 = parseInt(document.getElementById('number1').value);
+			var value2 = parseInt(document.getElementById('number2').value);
+
+			if((value1>=40&&value1<=60)&&(value2>=40&&value2<=60)){
+				document.getElementById("displayer").innerHTML = "<br>" + value1 + " and " + value2 + " are in range 40-60";
+			}
+
+			else if((value1>=70&&value1<=100)&&(value2>=70&&value2<=100)){
+				document.getElementById("displayer").innerHTML = "<br>" + value1 + " and " + value2 + " are in range 70-100";
+			}
+			
+			else{
+				document.getElementById("displayer").innerHTML = "<br> At least one of inserted integer is out of range";
+			}		
+		}
+	</script>
+
+</body>
+</html>
