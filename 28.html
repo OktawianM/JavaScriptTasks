@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Range checking</title>
+	<meta name="description" content="Program to check if two given integer values are in the range 50..99 (inclusive). Return true if either of them are in the said range.">
+</head>
+<body>
+	<label>Please enter two digits to check. </label><br>
+	<input type="number" name="inputNumber1" id="inputNumber1"><br>
+	<input type="number" name="inputNumber2" id="inputNumber2"><br>
+	<button onclick="getNumber()">Check</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">
+
+		var output  = "";
+
+		function getNumber(){			
+			var inputedNr1 = document.getElementById('inputNumber1').value;
+			var inputedNr2 = document.getElementById('inputNumber2').value;
+
+			checkRange(inputedNr1);
+			checkRange(inputedNr2);			
+		}
+
+		function checkRange(inputedVal){
+
+			if((inputedVal>=50) && (inputedVal <=99)){
+				output  = output + "Number: " + inputedVal + " is in the range 50 ... 99.<br>"
+				document.getElementById("displayer").innerHTML = output;
+			}
+
+			else{
+				output  = output + "Number: " + inputedVal + " is out of the range 50 ... 99.<br>"
+				document.getElementById("displayer").innerHTML = output;
+			}
+
+		}
+	</script>
+</body>
+</html>
