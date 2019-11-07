@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Searching specifying character</title>
+	<meta name="description" content="Program to check a given string contains 2 to 4 letters of a specified character.">
+</head>
+<body>
+
+	<label>Please insert string to check</label><br>
+	<input type="string" name="inputedStr" id="inputedStr"><br>	
+	<label>Specify letter you would like to search</label><br>
+	<input type="string" name="inputedLeter" id="inputedLeter"><br>	
+	<button onclick="stringAnalyzer()">Check</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">
+		function stringAnalyzer(){
+			var inputedString = document.getElementById('inputedStr').value;	
+			var inputedStringSplit = inputedString.split("");		
+			var letterToFind = document.getElementById('inputedLeter').value;
+			var stringLength = inputedStringSplit.length;
+			var letterCounter = 0;
+
+			for(var i=0; i<stringLength; i++){
+				if(inputedStringSplit[i]==letterToFind){
+					letterCounter++;
+					console.log("letterFOUND" + letterCounter);
+				};
+			}
+
+			if((letterCounter>=2)&&(letterCounter<=4)){
+				document.getElementById("displayer").innerHTML = "Inputed string: " + inputedString + " hat " + letterCounter + " " + letterToFind + " letters";
+			}
+
+			else{
+				document.getElementById("displayer").innerHTML = "Inputed string: " + inputedString + " hat incorrect letters amount" ;
+				}
+			}
+	</script>
+
+</body>
+</html>
