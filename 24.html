@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Replace first and last character</title>
+	<meta name="description" content="Program to create a new string from a given string with the first character of the given string added at the front and back.">
+</head>
+<body>
+
+	<label>Please enter the word to change</label>
+	<input type="string" name="strIn" id="strIn">
+	<button onclick="changeCharacters()">Change</button>
+	<div id="displayer"></div>
+
+	<script type="text/javascript">
+		function changeCharacters(){
+			var wordToRotate = document.getElementById('strIn').value;			
+
+			if(wordToRotate.length<=1){
+				document.getElementById('displayer').innerHTML= "To short word! Try again";
+			}
+
+			else{
+
+				var splitString = wordToRotate.split("");		   
+			    var lengthOfArr = splitString.length;
+			    var first = splitString[0];			    	
+
+			    	splitString.splice(0,0,first);
+			    	splitString[lengthOfArr+1]=first;
+
+			    var reversedWord = splitString.join("");
+
+				document.getElementById('displayer').innerHTML= "Modyfied word: " + reversedWord;
+			};			
+		};
+
+	</script>
+
+
+</body>
+</html>
