@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sum two integers</title>
+	<meta name="description" content="Program to check if the last digit of the three given positive integers is same.">
+</head>
+<body>
+	<label>Insert two integers to sum.</label><br>
+	<input type="numbers" name="num1" id="num1"><br>
+	<input type="numbers" name="num2" id="num2"><br>
+	<button onclick="sum()">Sum</button><br>
+	<label  id="displayer"></label>
+
+	<script type="text/javascript">
+		function sum(){
+			var number1 = parseInt(document.getElementById('num1').value);
+			var number2 = parseInt(document.getElementById('num2').value);
+			var sum = number1 + number2;
+			
+			if(sum>=50 && sum<=80){
+				document.getElementById("displayer").innerHTML="Sum is :" + sum + "<br>Returned value: 65";
+			}
+
+			else{
+				document.getElementById("displayer").innerHTML="Sum is :" + sum + "<br>Returned value: 80";
+			}
+		}
+	</script>
+
+</body>
+</html>
