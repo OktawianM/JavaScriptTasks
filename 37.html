@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>String modyfying</title>
+	<meta name="description" content="Program to create new string with first 3 characters are in lower case from a given string. If the string length is less than 3 convert all the characters in upper case.">
+</head>
+<body>
+	<label>Insert string to modify please.</label><br>
+	<input type="string" name="str1" id="str1"><br>	
+	<button onclick="modifyString()">Check</button><br>
+	<label  id="displayer"></label>
+
+	<script type="text/javascript">
+		function modifyString(){
+			var inputedString = document.getElementById('str1').value;
+						
+			if(inputedString.length>=3){
+				var convertionPart = (inputedString.substring(0,3)).toLowerCase();
+				var restString = inputedString.substring(3,inputedString.length);
+				document.getElementById("displayer").innerHTML="Converting 3 first letters from given string to lower case...<br>Converted string: " + convertionPart + restString;
+			}
+
+			else{
+				document.getElementById("displayer").innerHTML="Converting string to upper case...<br>Converted string: " + inputedString.toUpperCase(); 
+			}
+		}
+	</script>
+
+</body>
+</html>
