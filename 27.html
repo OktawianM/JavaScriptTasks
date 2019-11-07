@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Searching java word</title>
+	<meta name="description" content="Program to check if a string starts with 'Java' and false otherwise.">
+</head>
+<body>
+	<label>Please enter some string with "java" word.</label><br>
+	<input type="text" name="inputString" id="inputString"><br>
+	<button onclick="searchWord()">Check</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">
+		function searchWord(){
+			var inputedString = document.getElementById('inputString').value;
+			var foundElement = inputedString.search("java");
+	
+			if(foundElement >= 0){
+				document.getElementById("displayer").innerHTML = "I found java word in Your string."
+			}
+
+			else{
+				document.getElementById("displayer").innerHTML = "I've didnt found any java word in Your string."
+			}
+		}
+	</script>
+</body>
+</html>
