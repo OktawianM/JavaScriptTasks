@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>mark student</title>
+	<meta name="description" content="Program to check the total marks of a student in various examinations. The student will get A+ grade if the total marks are in the range 89..100 inclusive, if the examination is 'Final-exam.' the student will get A+ grade and total marks must be greater than or equal to 90. Return true if the student get A+ grade or false otherwise.">
+</head>
+<body>
+	<label>Insert total marks please.</label><br>
+	<input type="number" name="marks" id="marks">
+	<input type="checkbox" name="grade" id="grade">Final-exam<br>	
+	<button onclick="checkMarks()">Check</button><br>
+	<label  id="displayer"></label>
+
+	<script type="text/javascript">
+		function checkMarks(){
+			var totalMarks = document.getElementById('marks').value;
+
+			if(document.getElementById("grade").checked == true && totalMarks>=90 && totalMarks<=100){
+				document.getElementById("displayer").innerHTML="Student get A+ grade at Final-exam.";
+			}
+
+			else if(document.getElementById("grade").checked == true && totalMarks<90 || totalMarks>100){
+				document.getElementById("displayer").innerHTML="Total marks value is incorrect.";
+			}
+
+			else if(document.getElementById("grade").checked == false && totalMarks>=89 && totalMarks<=100){
+				document.getElementById("displayer").innerHTML="Student get A+ grade.";
+			}
+
+			else if(document.getElementById("grade").checked == false && totalMarks<89 || totalMarks>100){
+				document.getElementById("displayer").innerHTML="Marks value is incorrect.";
+			}
+
+			else{
+				document.getElementById("displayer").innerHTML="ERR 01.";
+			}
+
+		}
+	</script>
+
+</body>
+</html>
