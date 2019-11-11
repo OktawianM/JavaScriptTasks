@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Integer analyzer2</title>
+	<meta name="description" content="Program to check two given integer values and return true if one of the number is 15 or if their sum or difference is 15.">
+</head>
+<body>
+	<label>Insert two integers please.</label><br>
+	<input type="number" name="num1" id="num1"><br>
+	<input type="number" name="num2" id="num2"><br>
+	<button onclick="check()">Check</button><br>
+	<label  id="displayer"></label>
+
+	<script type="text/javascript">
+
+		function check(){
+			var number1 = parseInt(document.getElementById('num1').value);
+			var number2 = parseInt(document.getElementById('num2').value);
+			var sum = number1 + number2;
+			var dif1 = number1 - number2;
+			var dif2 = number2 - number1;
+
+			if(((number1 === 15) && (number2 != 15 )) && (sum === 15 || dif1 === 15 || dif2 === 15)){
+				document.getElementById("displayer").innerHTML = "<br> The assumed conditions have been met";
+			}
+
+			else if(((number1 != 15) && (number2 === 15 )) && (sum === 15 || dif1 === 15 || dif2 === 15)){
+				document.getElementById("displayer").innerHTML = "<br> The assumed conditions have been met";
+			}
+
+			else {
+				document.getElementById("displayer").innerHTML = "<br> The assumed conditions have not been met";
+			};
+		};
+			
+	</script>
+
+</body>
+</html>
