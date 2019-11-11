@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Integer analyzer</title>
+	<meta name="description" content="Program to check three given numbers, if the three numbers are same return 30 otherwise return 20 and if two numbers are same return 40.">
+</head>
+<body>
+	<label>Insert three integers please.</label><br>
+	<input type="number" name="num1" id="num1"><br>
+	<input type="number" name="num2" id="num2"><br>
+	<input type="number" name="num3" id="num3"><br>
+	<button onclick="check()">Check</button><br>
+	<label  id="displayer"></label>
+
+	<script type="text/javascript">
+		function check(){
+			var number1 = parseInt(document.getElementById('num1').value);
+			var number2 = parseInt(document.getElementById('num2').value);
+			var number3 = parseInt(document.getElementById('num3').value);
+			
+			if(number1===number2 && number2===number3){
+				document.getElementById("displayer").innerHTML="<br> returned value: 30";
+				return 30;
+			}
+
+			else if((number1===number2 && number2!=number3 && number1!=number3)
+				||(number1!=number2 && number2===number3 && number1!=number3)
+				||(number1!=number2 && number2!=number3 && number1===number3)){
+				document.getElementById("displayer").innerHTML="<br> returned value: 40";
+				return 40;
+			}
+
+			else{
+				document.getElementById("displayer").innerHTML="<br> returned value: 20";
+				return 20;
+			}
+		}
+	</script>
+
+</body>
+</html>
