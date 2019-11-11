@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>check if number is multiply of 7 or 11</title>
+	<meta name="description" content="Program to check two given non-negative integers and if one of the number (not both) is multiple of 7 or 11.">
+</head>
+<body>
+
+	<label>Please enter two numbers. </label><br>
+	<input type="numbers" name="num1" id="num1"><br>
+	<input type="numbers" name="num2" id="num2"><br>
+	<button onclick="checkDigits()">Check</button>
+
+	<div id="displayer"></div>
+
+	<script type="text/javascript">
+		function checkDigits(){
+			var num1 = parseInt(document.getElementById('num1').value);
+			var num2 = parseInt(document.getElementById('num2').value);
+						
+			if(((num1 % 7 == 0) || (num1 % 11 == 0)) && ((num2 % 7 != 0) || (num2 % 11 != 0))){
+				document.getElementById('displayer').innerHTML="<br>RETURNED true";
+				return true;
+			}
+
+			else if(((num2 % 7 == 0) || (num2 % 11 == 0)) && ((num1 % 7 != 0) || (num1 % 11 != 0))){
+				document.getElementById('displayer').innerHTML="<br>RETURNED true";
+				return true;
+			}
+
+			else{
+				document.getElementById('displayer').innerHTML="<br>RETURNED false";
+				return false;
+			}
+		};
+	</script>
+
+</body>
+</html>
