@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Integer analyzer</title>
+	<meta name="description" content="Program to check if three given numbers are increasing in strict mode or in soft mode. Note: Strict mode -> 10, 15, 31 : Soft mode -> 24, 22, 31 or 22, 22, 31">
+</head>
+<body>
+	
+	<script type="text/javascript">
+
+		console.log(check(10, 15, 31));
+		console.log(check(10, 15, 3));
+		console.log(check(24, 22, 31));		
+
+		function check(num1, num2, num3){			
+			
+			if(num1<num2 && num2<num3){
+				return "Strict mode";				
+			}
+
+			else if(num2<num3){
+				return  "Soft mode";				
+			}
+
+			else{
+				return  "Undefined";				
+			}
+		}
+	</script>
+
+</body>
+</html>
