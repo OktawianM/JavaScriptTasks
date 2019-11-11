@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Integer analyzer2</title>
+	<meta name="description" content="Program to check from three given integers that if a number is greater than or equal to 20 and less than one of the others.">
+</head>
+<body>
+	<label>Insert three integers please.</label><br>
+	<input type="number" name="num1" id="num1"><br>
+	<input type="number" name="num2" id="num2"><br>
+	<input type="number" name="num3" id="num3"><br>
+	<button onclick="getValues()">Check</button><br>
+	<label  id="displayer"></label>
+
+	<script type="text/javascript">
+
+		function getValues(){
+			var number1 = parseInt(document.getElementById('num1').value);
+			var number2 = parseInt(document.getElementById('num2').value);
+			var number3 = parseInt(document.getElementById('num3').value);
+
+			check(number1,number2,number3);
+			check(number2,number1,number3);
+			check(number3,number1,number2);
+		}
+
+		function check(valToCheck, valToCompare1, valToCompare2){
+			if((valToCheck>=20) && (valToCheck<valToCompare1 || valToCheck<valToCompare2)){
+				console.log(valToCheck + " is grather or equal to 20 and smaller than one of the other inserted numbers");
+			}
+
+			else if(valToCheck>=20 && valToCheck>=valToCompare1 && valToCheck>=valToCompare2){
+				console.log(valToCheck + " is grather or equal to 20 and is also greater or equal than the others inserted numbers");
+			}
+
+			else{
+				console.log(valToCheck + " is smaller than 20");
+			}			
+		};			
+			
+	</script>
+
+</body>
+</html>
