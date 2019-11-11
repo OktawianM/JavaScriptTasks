@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>string reverse</title>
+	<meta name="description" content="Program to reverse a given string.">
+</head>
+<body>
+
+	<label>Please enter string to reverse. </label><br>
+	<input type="string" name="str" id="str"><br>
+	<button onclick="modify()">Modify</button><br>
+
+	<div id="displayer"></div>
+
+	<script type="text/javascript">
+		function modify(){
+			var inputedString = document.getElementById('str').value;
+			var reversedString = inputedString.split("").reverse().join("");
+			document.getElementById("displayer").innerHTML = reversedString;
+		};			
+	</script>
+
+</body>
+</html>
