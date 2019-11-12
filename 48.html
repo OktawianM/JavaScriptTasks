@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>character replacing</title>
+	<meta name="description" content="Program to replace every character in a given string with the character following it in the alphabet.">
+</head>
+<body>
+
+
+
+	<script type="text/javascript">
+
+		console.log(LetterChanges("PYTHON"));
+		
+		function LetterChanges(inputedString){
+			
+			var modyfiedString = inputedString.split('');
+			var inputedStringLength = inputedString.length;
+			
+			
+			
+			for (var i = 0; i < inputedStringLength; i++) {
+				modyfiedString[i] = String.fromCharCode(1 + modyfiedString[i].charCodeAt(0));		
+			}
+			return modyfiedString.join('');
+			}
+
+	
+	</script>
+
+</body>
+</html>
