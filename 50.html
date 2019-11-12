@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Converting int to time</title>
+	<meta name="description" content="Program to convert a given number to hours and minutes.">
+</head>
+<body>
+	<label>Insert number to convert to hours and minutes</label><br>
+	<input type="number" name="inNr" id="inNr"><br>
+	<button onclick="change()">Convert</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">
+		function change(){
+			var inputedNr = document.getElementById('inNr').value;
+			var hours = parseInt(inputedNr/60);
+			var minutes = inputedNr - hours*60;
+
+			document.getElementById("displayer").innerHTML = inputedNr + "<br>Hours: " + hours + "<br>Minutes: " + minutes;
+		}
+	</script>
+</body>
+</html>
