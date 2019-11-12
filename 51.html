@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modifying to alphabetical order</title>
+	<meta name="description" content="Program to convert the letters of a given string in alphabetical order.">
+</head>
+<body>
+
+	<label>Please insert string to modify</label><br>
+	<input type="string" name="inputedStr" id="inputedStr"><br>		
+	<button onclick="stringModifyier()">Modify</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">
+		function stringModifyier(){
+			var inputedString = document.getElementById('inputedStr').value;	
+			var modifyiedString = inputedString.split("").sort().join("");
+			document.getElementById("displayer").innerHTML = "Modifyied string: " + modifyiedString ;
+			};
+	</script>
+
+</body>
+</html>
