@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>First letter capitalizing</title>
+	<meta name="description" content="Program to capitalize the first letter of each word of a given string.">
+</head>
+<body>
+
+	<label id="labelFirst">Please enter string to modify</label><br>
+	<input type="string" name="inputString" id="inputString" onchange="getString()"><br>
+	<div id="displayer"></div>	
+
+	<script type="text/javascript">
+
+		function getString(){
+			var inputedString = document.getElementById('inputString').value;							
+			var splitStringArr = inputedString.split(" ");
+			var wordsAmount = splitStringArr.length;
+			
+			for( var i=0; i<wordsAmount; i++){
+			var wordLength  =  splitStringArr[i].length;
+			splitStringArr[i] = splitStringArr[i].substr(0,1).toUpperCase() + splitStringArr[i].substr(1,wordLength);
+			console.log(splitStringArr[i]);
+			}	
+
+		    var newString = splitStringArr.join(" ");		    
+		    document.getElementById('displayer').innerHTML= "<br>RESULT = " + newString;				
+		};
+
+		</script>
+
+</body>
+</html>
+
+
