@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Two strings concatenation</title>
+	<meta name="description" content="Program to concatenate two strings except their first character..">
+</head>
+<body>
+
+	<label>Please insert first string</label><br>
+	<input type="string" name="inputedStr1" id="inputedStr1"><br>	
+	<label>Please insert second string</label><br>
+	<input type="string" name="inputedStr2" id="inputedStr2"><br>		
+	<button onclick="stringModifyier()">Modify</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">
+		function stringModifyier(){
+			var inputedString1 = document.getElementById('inputedStr1').value;
+			var inputedString2 = document.getElementById('inputedStr2').value;		
+			var modifyiedString = inputedString1.substring(1,inputedString1.length).concat("",inputedString2.substring(1,inputedString2.length));
+			document.getElementById("displayer").innerHTML = "Modifyied string: " + modifyiedString ;
+			};
+	</script>
+
+</body>
+</html>
