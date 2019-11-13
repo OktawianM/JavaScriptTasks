@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vowels searcher</title>
+	<meta name="description" content="Program to count the number of vowels in a given string.">
+</head>
+<body>
+
+	<label>Please insert string to check</label><br>
+	<input type="string" name="inputedStr" id="inputedStr"><br>		
+	<button onclick="stringChecker()">Check</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">
+		function stringChecker(){
+			var inputedString = document.getElementById('inputedStr').value;	
+			var vowels = inputedString.replace(/[^aeiou]/g, "");
+			document.getElementById("displayer").innerHTML = "I found: " + vowels.length + " vowels in inputed string";
+			};
+	</script>
+
+</body>
+</html>
