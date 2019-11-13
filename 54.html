@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>T and P characters searcher</title>
+	<meta name="description" content="Program to check if a given string contains equal number of p's and t's present.">
+</head>
+<body>
+
+	<label>Please insert string to check</label><br>
+	<input type="string" name="inputedStr" id="inputedStr"><br>		
+	<button onclick="stringChecker()">Check</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">
+		function stringChecker(){
+			var inputedString = document.getElementById('inputedStr').value;	
+			var tArr = inputedString.replace(/[^t]/g, "");
+			var pArr = inputedString.replace(/[^p]/g, "");
+
+				if(tArr.length === pArr.length){
+					document.getElementById("displayer").innerHTML = "Amount of 't' and 'p' letters in given string is same";
+				}
+
+				else{
+					document.getElementById("displayer").innerHTML = "Amount of 't' and 'p' letters in given string is different";
+				}
+			
+			};
+	</script>
+
+</body>
+</html>
