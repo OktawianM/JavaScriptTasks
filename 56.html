@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Creating substring from given string</title>
+	<meta name="description" content="Program to create a new string without the first and last character of a given string.">
+</head>
+<body>
+
+	<label>Please insert string to modify</label><br>
+	<input type="string" name="inputedStr" id="inputedStr"><br>		
+	<button onclick="stringModifyier()">Modify</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">
+		function stringModifyier(){
+			var inputedString = document.getElementById('inputedStr').value;	
+			var modifyiedString = inputedString.substring(1,inputedString.length-1);
+			document.getElementById("displayer").innerHTML = "Modifyied string: " + modifyiedString ;
+			};
+	</script>
+
+</body>
+</html>
