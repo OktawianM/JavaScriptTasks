@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Didtance checker</title>
+	<meta name="description" content="Program to check if the characters a and b are separated by exactly 3 places anywhere (at least once) in a given string.">
+</head>
+<body>
+
+	<label>Please insert string to check</label><br>
+	<input type="string" name="inputedStr" id="inputedStr"><br>		
+	<button onclick="stringChecker()">Check</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">
+		function stringChecker(){
+			var inputedString = document.getElementById('inputedStr').value;	
+			var inputedStringSplit = inputedString.split("");
+
+			for (var i = 0; i < inputedString.length; i++) {
+				if((inputedStringSplit[i] == 'a')&&((inputedStringSplit[i-4]=='b')||(inputedStringSplit[i+4]=='b'))){
+					console.log("I found letters 'a' and 'b' separated with three characters at " + i + " index.");
+				}
+				}
+			};
+	</script>
+
+</body>
+</html>
