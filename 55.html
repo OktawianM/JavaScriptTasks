@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>T and P characters searcher</title>
+	<meta name="description" content="Program to create a new string of specified copies (positive number) of a given string.">
+</head>
+<body>
+
+	<label>Please insert string to check</label><br>
+	<input type="string" name="inputedStr" id="inputedStr"><br>		
+	<label>How many copies would you like to add?</label><br>
+	<input type="number" name="copies" id="copies"><br>
+	<button onclick="getString()">Modify</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">
+		function getString(){
+			var inputedString = document.getElementById('inputedStr').value;
+			var noOfCopies = Math.abs(document.getElementById('copies').value);	
+
+			stringModify(noOfCopies, inputedString);			
+			};
+
+		function stringModify(copies, inputedString){
+			var modyfiedString = "";
+
+			for(var i=0; i<copies; i++){
+				modyfiedString=inputedString+modyfiedString;
+			}
+			document.getElementById("displayer").innerHTML = "Modyfied string: " + modyfiedString;
+		}
+	</script>
+
+</body>
+</html>
