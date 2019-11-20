@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>String slice</title>
+	<meta name="description" content="Program to concatenate two strings and return the result. If the length of the strings are not same then remove the characters from the longer string.">
+</head>
+<body>
+
+	<label>Please insert first string</label><br>
+	<input type="string" name="inputedStr1" id="inputedStr1"><br>	
+	<label>Please insert second string</label><br>
+	<input type="string" name="inputedStr2" id="inputedStr2"><br>		
+	<button onclick="stringModifyier()">Modify</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">
+		function stringModifyier(){
+			var inputedString1 = document.getElementById('inputedStr1').value;
+			var inputedString2 = document.getElementById('inputedStr2').value;
+			var modifyiedString ="";	
+					
+			if(inputedString1.length === inputedString2.length){
+				modifyiedString = inputedString1.concat("", inputedString2);
+				document.getElementById("displayer").innerHTML = "Modifyied string: " + modifyiedString ;
+			}
+
+			else{
+				var lengthDifference = Math.abs(inputedString1.length - inputedString2.length);
+				var modyfiedWord = "";
+
+				if(inputedString1.length > inputedString2.length){
+					modyfiedWord = inputedString1.substring(0,inputedString1.length - lengthDifference);
+					modifyiedString = modyfiedWord.concat("", inputedString2);
+					document.getElementById("displayer").innerHTML = "Modifyied string: " + modifyiedString;
+				}
+
+				else if(inputedString1.length < inputedString2.length){
+					modyfiedWord = inputedString2.substring(0,inputedString2.length - lengthDifference);
+					modifyiedString = inputedString1.concat("", modyfiedWord);
+					document.getElementById("displayer").innerHTML = "Modifyied string: " + modifyiedString;
+				}
+
+				else{
+					document.getElementById("displayer").innerHTML = "ERR 01";
+				}
+			};
+		}
+
+		
+	</script>
+
+</body>
+</html>
