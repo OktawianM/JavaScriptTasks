@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sum array elements</title>
+	<meta name="description" content="rogram to compute the sum of three elements of a given array of integers of length 3.">
+</head>
+<body>
+
+	<label>Please insert first number</label><br>
+	<input type="number" name="inputedNo1" id="inputedNo1"><br>	
+	<label>Please insert second number</label><br>
+	<input type="number" name="inputedNo2" id="inputedNo2"><br>	
+	<label>Please insert third number</label><br>
+	<input type="number" name="inputedNo3" id="inputedNo3"><br>		
+	<button onclick="sum()">Sum</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">
+			
+		function sum(){
+			
+			var inputedNumbers = [Number.parseInt(document.getElementById('inputedNo1').value), Number.parseInt(document.getElementById('inputedNo2').value), Number.parseInt(document.getElementById('inputedNo3').value)];
+			var sum = 0;
+			
+			for(var i = 0; i<inputedNumbers.length; i++){
+				sum = sum + inputedNumbers[i];
+				console.log(sum);
+			};
+			
+		document.getElementById("displayer").innerHTML = "Sum of three given numbers is:  " + sum;			
+	};
+			
+	</script>
+
+</body>
+</html>
