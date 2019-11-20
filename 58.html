@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>String slice</title>
+	<meta name="description" content="Program to move last three character to the start of a given string. The string length must be greater or equal to three.">
+</head>
+<body>
+
+	<label>Please insert string to modify</label><br>
+	<input type="string" name="inputedStr" id="inputedStr"><br>		
+	<button onclick="stringModifyier()">Modify</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">
+		function stringModifyier(){
+			var inputedString = document.getElementById('inputedStr').value;	
+
+			if(inputedString.length >= 3){
+				var modifyiedString = inputedString.slice(inputedString.length-3, inputedString.length).concat("", inputedString.slice(inputedString, inputedString.length-3));
+				document.getElementById("displayer").innerHTML = "Modifyied string: " + modifyiedString ;
+			}
+
+			else{
+				document.getElementById("displayer").innerHTML = "Given string is to short";
+			}					
+		};
+
+	</script>
+
+</body>
+</html>
