@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Finding longest string</title>
+	<meta name="description" content="Program to find the longest string from an given array of strings.">
+</head>
+<body>
+
+	<label>Please insert first string</label><br>
+	<input type="string" name="inputedStr1" id="inputedStr1"><br>	
+	<label>Please insert second string</label><br>
+	<input type="string" name="inputedStr2" id="inputedStr2"><br>		
+	<button onclick="findString()">Check</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">
+		function findString(){
+			var inputedString1 = document.getElementById('inputedStr1').value;
+			var inputedString2 = document.getElementById('inputedStr2').value;	
+			var stringArr = [inputedString1, inputedString2];
+
+			if(stringArr[0].length>stringArr[1].length){
+				document.getElementById("displayer").innerHTML = "The longest inputed string: " + stringArr[0];
+			}
+
+			else if(stringArr[0].length<stringArr[1].length){
+				document.getElementById("displayer").innerHTML = "The longest inputed string: " + stringArr[1];
+			}
+
+			else{
+				document.getElementById("displayer").innerHTML = "Inputed strings are same length";
+			}		
+		};
+	</script>
+
+</body>
+</html>
