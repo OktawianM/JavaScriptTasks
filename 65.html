@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Divide string</title>
+	<meta name="description" content="Program to divide an given array of positive integers into two parts. First element goes to first part, second element goes to second part, and third element goes to first part and so on. Now compute the sum of two parts and store into an array of size two.">
+</head>
+<body>
+
+	<label>Please insert word to modify</label><br>
+	<input type="string" name="inputedNo1" id="inputedNo1"><br>	
+	<button onclick="modify()">Modify</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">		
+			
+		function modify(){
+
+			var inputedNumbers = (document.getElementById('inputedNo1').value).split("");
+			var evenArr = [];
+			var oddArr = [];
+			var sum = 0;
+			var indexCounter = 0;
+
+			for(var i = 0; i<inputedNumbers.length; i++){
+				if(i%2 == 0){
+					oddArr.push(inputedNumbers[i]);					
+				}
+
+				else{
+					evenArr.push(inputedNumbers[i]);
+				}			
+			}
+				document.getElementById("displayer").innerHTML = "Letters from odd indexes: " + oddArr + "<br>Letters from even indexes: " + evenArr;								
+		}
+
+	</script>	
+
+</body>
+</html>

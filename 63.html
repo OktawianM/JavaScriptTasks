@@ -16,15 +16,26 @@
 		function sum(){
 
 			var inputedNumbers = (document.getElementById('inputedNo1').value).split("");
+			var evenArr = [];
+			var oddArr = [];
 			var sum = 0;
+			var indexCounter = 0;
 
 			for(var i = 0; i<inputedNumbers.length; i++){
-				var digit = 
-				sum = sum + Number.parseInt(inputedNumbers[i]);
-				console.log(sum);
+				if(i%2 == 0){
+					oddArr.push(inputedNumbers[i]);
+					console.log(inputedNumbers[i]);
+				}
+
+				else{
+					evenArr.push(inputedNumbers[i]);
+					console.log(inputedNumbers[i]);
+
+				}
+			
 			}
 
-				document.getElementById("displayer").innerHTML = "The sum of the digits of the number entered is: " + sum;								
+				document.getElementById("displayer").innerHTML = "The sum of the digits of the number entered is: ";								
 		}
 
 	</script>	
