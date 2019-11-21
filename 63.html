@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sum number digits</title>
+	<meta name="description" content="Program to add two digits of a given positive integer of length two.">
+</head>
+<body>
+
+	<label>Please insert number</label><br>
+	<input type="number" name="inputedNo1" id="inputedNo1"><br>	
+	<button onclick="sum()">Sum</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">		
+			
+		function sum(){
+
+			var inputedNumbers = (document.getElementById('inputedNo1').value).split("");
+			var sum = 0;
+
+			for(var i = 0; i<inputedNumbers.length; i++){
+				var digit = 
+				sum = sum + Number.parseInt(inputedNumbers[i]);
+				console.log(sum);
+			}
+
+				document.getElementById("displayer").innerHTML = "The sum of the digits of the number entered is: " + sum;								
+		}
+
+	</script>	
+
+</body>
+</html>
