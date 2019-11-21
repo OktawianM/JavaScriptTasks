@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modifying array elements</title>
+	<meta name="description" content="Program to find the larger value between the first or last and set all the other elements with that value. Display the new array.">
+</head>
+<body>
+
+	<label>Please insert first number</label><br>
+	<input type="number" name="inputedNo1" id="inputedNo1"><br>	
+	<label>Please insert second number</label><br>
+	<input type="number" name="inputedNo2" id="inputedNo2"><br>	
+	<label>Please insert third number</label><br>
+	<input type="number" name="inputedNo3" id="inputedNo3"><br>	
+	<label>Please insert fourth number</label><br>
+	<input type="number" name="inputedNo4" id="inputedNo4"><br>		
+	<button onclick="checkNumbers()">Sum</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">		
+			
+		function checkNumbers(){
+
+			var inputedNumbers = [Number.parseInt(document.getElementById('inputedNo1').value), Number.parseInt(document.getElementById('inputedNo2').value), Number.parseInt(document.getElementById('inputedNo3').value), Number.parseInt(document.getElementById('inputedNo4').value)];
+
+			var biggerNo = 0;
+
+			if(inputedNumbers[0]>inputedNumbers[3]){
+				biggerNo = inputedNumbers[0];
+			}
+
+			else{
+				biggerNo = inputedNumbers[(inputedNumbers.length)-1];				
+			}
+
+			console.log("New array values:");
+
+			for (var i = 0; i < inputedNumbers.length; i++) {
+				inputedNumbers[i] = biggerNo;
+				console.log((i+1) + ": " + inputedNumbers[i]);
+			}		
+		}
+
+	</script>	
+
+</body>
+</html>
