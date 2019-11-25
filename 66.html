@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Finding angle type</title>
+	<meta name="description" content="Program to find the types of a given angle.">
+</head>
+<body>
+
+	<label>Please insert angle value</label><br>
+	<input type="number" name="inputedNo1" id="inputedNo1"><br>	
+	<button onclick="check()">Check</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">		
+			
+		function check(){
+
+			var inputedNumber = document.getElementById('inputedNo1').value;
+
+			if(inputedNumber>0 && inputedNumber<90){
+				document.getElementById("displayer").innerHTML = "Acute angle";
+			}
+			else if(inputedNumber==90){
+				document.getElementById("displayer").innerHTML = "Right angle";
+			}
+			else if(inputedNumber>90 && inputedNumber<180){
+				document.getElementById("displayer").innerHTML = "Obtuse angle";
+			}
+			else if(inputedNumber==180){
+				document.getElementById("displayer").innerHTML = "Straight angle";
+			}
+			else{
+				document.getElementById("displayer").innerHTML = "Incorrect angle value";
+			}
+			
+											
+		}
+
+	</script>	
+
+</body>
+</html>
