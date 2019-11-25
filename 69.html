@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Maximal difference searching</title>
+	<meta name="description" content="Program to find the maximal difference between any two adjacent elements of a given array of integers.">
+</head>
+<body>
+
+	<label>Please insert first number</label><br>
+	<input type="number" name="inputedNo1" id="inputedNo1"><br>	
+	<label>Please insert second number</label><br>
+	<input type="number" name="inputedNo2" id="inputedNo2"><br>	
+	<label>Please insert third number</label><br>
+	<input type="number" name="inputedNo3" id="inputedNo3"><br>	
+	<label>Please insert fourth number</label><br>
+	<input type="number" name="inputedNo4" id="inputedNo4"><br>	
+		
+	<button onclick="check()">Check</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">		
+			
+		function check(){
+
+			var inputedNumber1 = Number.parseInt(document.getElementById('inputedNo1').value);
+			var inputedNumber2 = Number.parseInt(document.getElementById('inputedNo2').value);
+			var inputedNumber3 = Number.parseInt(document.getElementById('inputedNo3').value);
+			var inputedNumber4 = Number.parseInt(document.getElementById('inputedNo4').value);
+			var numbersArr = [inputedNumber1, inputedNumber2, inputedNumber3, inputedNumber4];
+			var diffRight = 0, diffLeft = 0, maxDiff = 0;
+			
+			for (var i = 0; i <(numbersArr.length)-1; i++){
+				diffRight = numbersArr[i]-numbersArr[i+1];
+				diffLeft = numbersArr[i+1]-numbersArr[i];
+				
+				if(diffRight<maxDiff){
+					maxDiff =diffRight;
+				}
+				else if(diffLeft<maxDiff){
+					maxDiff =diffLeft;
+				}				
+			}
+			
+				document.getElementById("displayer").innerHTML = "Maximal difference between any two adjacent elements is " + maxDiff;		
+		};
+
+	</script>	
+
+</body>
+</html>
