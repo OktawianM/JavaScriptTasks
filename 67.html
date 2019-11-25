@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Divider checking</title>
+	<meta name="description" content="Program to check whether two given integers are similar or not, if a given divisor divides both integers and it does not divide either.">
+</head>
+<body>
+
+	<label>Please insert first nuber</label><br>
+	<input type="number" name="inputedNo1" id="inputedNo1"><br>	
+	<label>Please insert second nuber</label><br>
+	<input type="number" name="inputedNo2" id="inputedNo2"><br>	
+	<label>Please insert divider</label><br>
+	<input type="number" name="divider" id="divider"><br>	
+	<button onclick="check()">Check</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">		
+			
+		function check(){
+
+			var inputedNumber1 = document.getElementById('inputedNo1').value;
+			var inputedNumber2 = document.getElementById('inputedNo2').value;
+			var divider = document.getElementById('divider').value;
+
+			
+			if(inputedNumber1%divider === 0 && inputedNumber2%divider === 0){
+				document.getElementById("displayer").innerHTML = "Both numbers are divisible by " + divider;
+			}
+			else if(inputedNumber1%divider === 0 && inputedNumber2%divider !== 0){
+				document.getElementById("displayer").innerHTML = "Only first number is divisible by " + divider;
+			}
+			else if(inputedNumber1%divider !== 0 && inputedNumber2%divider === 0){
+				document.getElementById("displayer").innerHTML = "Only second number is divisible by " + divider;
+			}
+			else{
+				document.getElementById("displayer").innerHTML = "Both numbers are indivisible by " + divider;
+			}											
+		}
+
+	</script>	
+
+</body>
+</html>
