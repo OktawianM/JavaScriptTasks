@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Heighest sum serching</title>
+	<meta name="description" content="Program to find the maximum possible sum of some of its k consecutive numbers (numbers that follow each other in order.) of a given array of positive integers.">
+</head>
+<body>
+
+	<label>Please insert first nuber</label><br>
+	<input type="number" name="inputedNo1" id="inputedNo1"><br>	
+	<label>Please insert second nuber</label><br>
+	<input type="number" name="inputedNo2" id="inputedNo2"><br>	
+	<label>Please insert third nuber</label><br>
+	<input type="number" name="inputedNo3" id="inputedNo3"><br>	
+	<label>Please insert fourth nuber</label><br>
+	<input type="number" name="inputedNo4" id="inputedNo4"><br>	
+		
+	<button onclick="check()">Check</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">		
+			
+		function check(){
+
+			var inputedNumber1 = Number.parseInt(document.getElementById('inputedNo1').value);
+			var inputedNumber2 = Number.parseInt(document.getElementById('inputedNo2').value);
+			var inputedNumber3 = Number.parseInt(document.getElementById('inputedNo3').value);
+			var inputedNumber4 = Number.parseInt(document.getElementById('inputedNo4').value);
+			var numbersArr = [inputedNumber1, inputedNumber2, inputedNumber3, inputedNumber4];
+			var sum = 0, maxSum = 0;
+			
+			for (var i = 0; i <(numbersArr.length)-1; i++){
+				sum = numbersArr[i]+numbersArr[i+1];
+				if(sum>maxSum){
+					maxSum =sum;
+				}				
+			}
+				document.getElementById("displayer").innerHTML = "The largest sum of adjacent numbers entered is " + maxSum;		
+		};
+
+	</script>	
+
+</body>
+</html>
