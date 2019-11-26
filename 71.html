@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Searching most apears integer</title>
+	<meta name="description" content="Pprogram to find the number which appears most in a given array of integers.">
+</head>
+<body>
+
+	<label>Please insert first number</label><br>
+	<input type="number" name="inputedNo1" id="inputedNo1"><br>	
+	<label>Please insert second number</label><br>
+	<input type="number" name="inputedNo2" id="inputedNo2"><br>	
+	<label>Please insert third number</label><br>
+	<input type="number" name="inputedNo3" id="inputedNo3"><br>	
+	<label>Please insert fourth number</label><br>
+	<input type="number" name="inputedNo4" id="inputedNo4"><br>	
+		
+	<button onclick="check()">Check</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">		
+			
+		function check(){
+
+			var inputedNumber1 = Number.parseInt(document.getElementById('inputedNo1').value);
+			var inputedNumber2 = Number.parseInt(document.getElementById('inputedNo2').value);
+			var inputedNumber3 = Number.parseInt(document.getElementById('inputedNo3').value);
+			var inputedNumber4 = Number.parseInt(document.getElementById('inputedNo4').value);
+			var numbersArr = [inputedNumber1, inputedNumber2, inputedNumber3, inputedNumber4];
+			var sortedArr = numbersArr.sort();			
+			var counter = 1, max = 0, maxVal = 0;
+
+			console.log(sortedArr);
+			
+			for (var i = 0; i <sortedArr.length; i++){
+
+				if(sortedArr[i]==sortedArr[i+1]){
+					counter++;
+					maxVal = sortedArr[i];
+					
+				}
+			}
+
+			if(counter==1){				
+				console.log("Each of the given numbers occurs only once");
+			}
+
+			else{
+				console.log("Same no. founded: " + counter + "times");
+			}
+			
+						
+		};
+
+	</script>	
+
+</body>
+</html>
