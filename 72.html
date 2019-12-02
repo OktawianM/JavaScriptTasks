@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Number replacing</title>
+	<meta name="description" content="Program to replace all the numbers with a specified number of a given array of integers.">
+</head>
+<body onload="fillComponents()">
+
+	<label>Array to modify:</label><br>
+	<label id="displayer1"></label><br><br>
+	<label>Choose value to replece</label><br>
+	<input type="number" name="inputedNo" id="inputedNo"><br>	
+	<label>New value</label><br>
+	<input type="number" name="newVal" id="newVal"><br>	
+		
+	<button onclick="change()">Change</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">	
+
+		var arrToModify = [1,2,6,3,7,6,9,1,6,4];
+
+		function fillComponents(){
+			document.getElementById("displayer1").innerHTML = arrToModify;	
+		};
+			
+		function change(){
+			
+			var inputedNumber = Number.parseInt(document.getElementById('inputedNo').value);
+			var newValue = Number.parseInt(document.getElementById('newVal').value);
+			var modyfiedArr = [];
+			var valCounter =0;
+
+			for(var i=0; i<arrToModify.length; i++){
+				if(arrToModify[i] == inputedNumber){
+					valCounter++;
+				}
+			}
+
+			if(valCounter>0){
+
+				for(var i=0; i<arrToModify.length; i++){			
+
+					if(arrToModify[i] == inputedNumber){
+						modyfiedArr[i] = newValue;					
+					}
+
+					else{					
+						modyfiedArr[i] = arrToModify[i];
+					}
+				};
+
+				document.getElementById("displayer").innerHTML = modyfiedArr;
+			}
+
+			else{
+				document.getElementById("displayer").innerHTML = "Wrong value!";
+			}		
+			
+		};
+			
+			
+
+	</script>	
+
+</body>
+</html>
