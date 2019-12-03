@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Searching same value</title>
+	<meta name="description" content="Program to check if there is at least one element which occurs in two given sorted arrays of integers.">
+</head>
+<body>
+
+	<br><label>Searching same values</label><br>
+
+	<label>FIRST ARRAY</label><br>
+	<label>Please insert first number</label><br>
+	<input type="number" name="inputedNo11" id="inputedNo11"><br>	
+	<label>Please insert second number</label><br>
+	<input type="number" name="inputedNo21" id="inputedNo21"><br>	
+	<label>Please insert third number</label><br>
+	<input type="number" name="inputedNo31" id="inputedNo31"><br>
+
+	<br><label>SECOND ARRAY</label><br>
+	<label>Please insert first number</label><br>
+	<input type="number" name="inputedNo12" id="inputedNo12"><br>	
+	<label>Please insert second number</label><br>
+	<input type="number" name="inputedNo22" id="inputedNo22"><br>	
+	<label>Please insert third number</label><br>
+	<input type="number" name="inputedNo32" id="inputedNo32"><br>
+		
+	<button onclick="check()">Check</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">		
+			
+		function check(){
+
+			var inputedNumber1 = Number.parseInt(document.getElementById('inputedNo11').value);
+			var inputedNumber2 = Number.parseInt(document.getElementById('inputedNo21').value);
+			var inputedNumber3 = Number.parseInt(document.getElementById('inputedNo31').value);
+
+			var inputedNumber4 = Number.parseInt(document.getElementById('inputedNo12').value);
+			var inputedNumber5 = Number.parseInt(document.getElementById('inputedNo22').value);
+			var inputedNumber6 = Number.parseInt(document.getElementById('inputedNo32').value);
+			
+			var numbersArr1 = [inputedNumber1, inputedNumber2, inputedNumber3];
+			var numbersArr2 = [inputedNumber4, inputedNumber5, inputedNumber6];
+
+			for(let i=0; i<numbersArr1.length; i++){
+				for(let j=0; j<numbersArr2.length; j++){
+					if(numbersArr1[i]===numbersArr2[j]){
+						console.log("The number " + numbersArr1[i] + " appears in both arrays");
+					}
+				}
+
+			}
+			
+					
+						
+		};
+
+	</script>	
+
+</body>
+</html>
