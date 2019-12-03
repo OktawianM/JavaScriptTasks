@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Finding maximal number</title>
+	<meta name="description" content="Program to find the maximal number from a given positive integer by deleting exactly one digit of the given number.">
+</head>
+<body>
+
+	<label>Please insert at least two digits number</label><br>
+	<input type="number" name="inputedNo" id="inputedNo"><br>		
+	<button onclick="check()">Find</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">	
+
+		
+		function check(){
+			
+			var inputedNumber = document.getElementById('inputedNo').value;
+			//var splitedInputedNumber = inputedNumber.split("");
+			var modyfiedArr = [];
+
+			for(let i=0; i<inputedNumber.length; i++){
+				modyfiedArr[i] = inputedNumber.slice(0,i) + inputedNumber.slice(i+1,inputedNumber.length);
+				console.log(modyfiedArr[i]);
+			}	
+
+			valuesArr = modyfiedArr.sort();
+
+			document.getElementById("displayer").innerHTML = "Possibilities: " + modyfiedArr +  ".<br> Heighest number: " + valuesArr[valuesArr.length-1];
+			
+			
+		};
+			
+			
+
+	</script>	
+
+</body>
+</html>
