@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Number dividing</title>
+	<meta name="description" content="Program to divide an integer by another integer as long as the result is an integer and return the result.">
+</head>
+<body>
+
+	<label>Please insert integer to devide</label><br>
+	<input type="number" name="inputedNo" id="inputedNo"><br>		
+	<label>Please insert devider digit</label><br>
+	<input type="number" name="divider" id="divider"><br>	
+	<button onclick="check()">Divide</button><br>	
+
+	<script type="text/javascript">	
+		
+		function check(){
+			
+			var dividedNo = document.getElementById('inputedNo').value;
+			var divider = document.getElementById('divider').value;			
+			
+			do{
+				if(dividedNo % divider==0){
+					console.log(dividedNo + " : " + divider + " = " + dividedNo/divider);
+					dividedNo = dividedNo/divider;					
+				}
+
+				else{
+					console.log(dividedNo + " : " + divider + " + is indivisible ");					
+				}				
+
+			}while(dividedNo % divider==0);
+
+		};
+			
+			
+	</script>	
+
+</body>
+</html> 
