@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New array creating</title>
+	<meta name="description" content="Program to create the dot products of two given 3D vectors.">
+</head>
+<body>
+
+	<br><label>Creating new 3d vector</label><br>
+
+	<label>FIRST ARRAY</label><br>
+	<label>Please insert first number</label><br>
+	<input type="number" name="inputedNo11" id="inputedNo11"><br>	
+	<label>Please insert second number</label><br>
+	<input type="number" name="inputedNo21" id="inputedNo21"><br>	
+	<label>Please insert third number</label><br>
+	<input type="number" name="inputedNo31" id="inputedNo31"><br>
+
+	<br><label>SECOND ARRAY</label><br>
+	<label>Please insert first number</label><br>
+	<input type="number" name="inputedNo12" id="inputedNo12"><br>	
+	<label>Please insert second number</label><br>
+	<input type="number" name="inputedNo22" id="inputedNo22"><br>	
+	<label>Please insert third number</label><br>
+	<input type="number" name="inputedNo32" id="inputedNo32"><br>
+		
+	<button onclick="check()">Create</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">		
+			
+		function check(){
+
+			var inputedNumber1 = Number.parseInt(document.getElementById('inputedNo11').value);
+			var inputedNumber2 = Number.parseInt(document.getElementById('inputedNo21').value);
+			var inputedNumber3 = Number.parseInt(document.getElementById('inputedNo31').value);
+
+			var inputedNumber4 = Number.parseInt(document.getElementById('inputedNo12').value);
+			var inputedNumber5 = Number.parseInt(document.getElementById('inputedNo22').value);
+			var inputedNumber6 = Number.parseInt(document.getElementById('inputedNo32').value);
+			
+			var numbersArr1 = [inputedNumber1, inputedNumber2, inputedNumber3];
+			var numbersArr2 = [inputedNumber4, inputedNumber5, inputedNumber6];
+			var numbersArr3 = [];
+
+			for(let i=0; i<numbersArr1.length; i++){
+				numbersArr3[i] = numbersArr1[i]*numbersArr2[i];
+				}
+
+			document.getElementById('displayer').innerHTML = "<br>New array values: " + numbersArr3;			
+						
+		};
+
+	</script>	
+
+</body>
+</html>
