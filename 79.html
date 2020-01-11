@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Finding prime numbers</title>
+	<meta name="description" content="Program to sort an array of all prime numbers between 1 and a given integer.">
+</head>
+<body>
+
+	<br><label>Finding prime numbers</label><br>
+	
+	<label>Please insert maximal range number</label><br>
+	<input type="number" name="inputedNo1" id="inputedNo1"><br>		
+	<button onclick="check()">Find</button><br>
+	<label id="displayer"></label>
+	
+	<script type="text/javascript">		
+			
+		function check(){
+
+			var inputedNumber = Number.parseInt(document.getElementById('inputedNo1').value);
+			var dividers = 0;
+			var primeNumbers = [];
+			
+			for(let i=1; i<=inputedNumber; i++){
+				for(let j=1; j<=inputedNumber; j++){
+					if(i%j==0){
+						console.log(i + " jest podzielne przez " + j);
+						dividers++;
+					}
+				}
+
+				if(dividers==2){
+					primeNumbers.push(i);
+				}
+
+				else{
+					console.log("Dividers = " + dividers);
+				}
+
+				dividers = 0;
+			}
+			document.getElementById('displayer').innerHTML = primeNumbers;			
+		};
+
+	</script>	
+
+</body>
+</html>
