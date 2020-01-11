@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Summing number digits</title>
+	<meta name="description" content="Program to find the number of times to replace a given number with the sum of its digits until it convert to a single digit number.">
+</head>
+<body>
+
+	<label>Please insert integer</label><br>
+	<input type="number" name="inputedNo" id="inputedNo"><br>	
+	<button onclick="check()">Sum</button><br>	
+	<label id="displayer"></label>
+
+	<script type="text/javascript">	
+		
+		function check(){
+			
+			var inputedNo = document.getElementById('inputedNo').value;
+
+			sumfunction(inputedNo);
+
+		};	
+
+		function sumfunction(inputedNo){
+			var arrSum = 0;
+			var inputedNoArr = inputedNo.split("");
+
+			for( let i=0; i<inputedNoArr.length; i++){
+				arrSum = arrSum + parseInt(inputedNoArr[i]);
+				console.log(arrSum);
+			}
+
+			if(arrSum>=10){
+				sumfunction(String(arrSum));
+				console.log("Sum of " + inputedNo.split("") + " = " + arrSum);
+				console.log("Going to next loop");
+
+			}
+
+			else{
+				document.getElementById("displayer").innerHTML = "Sum of all digits = " + arrSum;
+
+			}
+		}	
+			
+	</script>	
+
+</body>
+</html> 
