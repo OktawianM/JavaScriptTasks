@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Checking inputed string</title>
+	<meta name="description" content="Program to check whether a given string represents a correct sentence or not. A string is considered correct sentence if it starts with the capital letter and ends with a full stop (.).">
+</head>
+<body>
+
+	<br><label>Checking inputed string</label><br>
+	
+	<label>Please insert string to check</label><br>
+	<input type="string" name="inputedStr1" id="inputedStr1"><br>		
+	<button onclick="check()">Check</button><br>
+	<label id="displayer"></label>
+	
+	<script type="text/javascript">		
+			
+		function check(){
+
+			var inputedString = document.getElementById('inputedStr1').value;
+			var firstLetter = inputedString[0];
+			var lastLetter = inputedString[(inputedString.length)-1];
+			
+			if(/[A-Z]/.test(firstLetter) && lastLetter == "."){
+				document.getElementById('displayer').innerHTML = "The provided string meets the intended requirements";
+			}
+
+			else{
+				document.getElementById('displayer').innerHTML = "The provided string does not meets the intended requirements";	
+			}
+						
+		};
+
+	</script>	
+
+</body>
+</html>
