@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Comparing values</title>
+	<meta name="description" content="Program to check a number from three given numbers where two numbers are equal, find the third one.">
+</head>
+<body>
+
+	<br><label>Finding even values</label><br>
+
+	<label>Please insert 3 numbers</label><br>
+	<label>Number 1.</label><br>
+	<input type="number" name="inputedNo1" id="inputedNo1"><br>		
+	<label>Number 2.</label><br>
+	<input type="number" name="inputedNo2" id="inputedNo2"><br>	
+	<label>Number 3.</label><br>
+	<input type="number" name="inputedNo3" id="inputedNo3"><br>	
+	<button onclick="check()">Find</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">		
+
+		function check(){
+
+			var inputedNumber1 = document.getElementById('inputedNo1').value;
+			var inputedNumber2 = document.getElementById('inputedNo2').value;
+			var inputedNumber3 = document.getElementById('inputedNo3').value;
+			var isEquals = false;
+
+			if((inputedNumber1 == inputedNumber2) && (inputedNumber1 == inputedNumber3) && (inputedNumber3 == inputedNumber2)){
+				document.getElementById('displayer').innerHTML = "All given numbers are equal";	
+			}
+
+			else if((inputedNumber1 != inputedNumber2) && (inputedNumber1 != inputedNumber3) && (inputedNumber3 != inputedNumber2)){
+				document.getElementById('displayer').innerHTML = "All entered numbers are different";	
+			}
+			else {
+				document.getElementById('displayer').innerHTML = "One of entered number is different from the others";	
+			}
+					
+		};
+
+	</script>	
+
+</body>
+</html> 
