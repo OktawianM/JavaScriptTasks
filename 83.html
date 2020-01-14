@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Checking factorial number</title>
+	<meta name="description" content="Program to find the number of trailing zeros in the decimal representation of the factorial of a given number.">
+</head>
+<body>
+
+	<br><label>Zeros trailing</label><br>
+
+	<label>Enter the number to check the factorial</label><br>	
+	<input type="number" name="inputedNo1" id="inputedNo1"><br>		
+	<button onclick="check()">Find</button><br>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">		
+
+		function check(){
+
+			var inputedNumber1 = Number.parseInt(document.getElementById('inputedNo1').value);
+			var factorialNo =1;
+			
+			for(let i = 1; i <= inputedNumber1; i++){
+				factorialNo = factorialNo*i;				
+			};
+
+			if(factorialNo % 10 == 0){
+				document.getElementById('displayer').innerHTML = "Last digit of factorial number is ZERO.<br> Factorial number = " + factorialNo;	
+			
+			}
+
+			else{
+				document.getElementById('displayer').innerHTML = "Last digit of factorial number is different from zero.<br> Factorial number = " + factorialNo;					
+			}					
+		};
+
+	</script>	
+
+</body>
+</html> 
