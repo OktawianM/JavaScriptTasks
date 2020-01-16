@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Checking increasing digits sequence</title>
+	<meta name="description" content="Program to check whether a given integer has an increasing digits sequence.">
+</head>
+<body>
+
+	<label>Please insert integer to check</label><br>
+	<input type="number" name="inputedNo" id="inputedNo"><br>	
+	<button onclick="check()">Check</button><br>	
+	<label id="displayer"></label>
+
+	<script type="text/javascript">	
+
+		function check(){
+
+			var inputedNoArr = (document.getElementById('inputedNo').value).split('');
+
+			for(var i=0; i<inputedNoArr.length-1; i++){
+				if(inputedNoArr[i]<inputedNoArr[i+1]){
+					document.getElementById("displayer").innerHTML = "The string of numbers is increasing";					
+				}
+				else{					
+					document.getElementById("displayer").innerHTML = "The string of numbers is NOT increasing";
+				}
+			}			
+		};		
+
+	</script>	
+
+</body>
+</html>  
