@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Checking point position</title>
+	<meta name="description" content="Pprogram to check whether a point lies strictly inside a given circle.">
+</head>
+<body>
+
+	<label>Please insert circle parameters</label><br>
+	<label>X: </label><input type="number" name="centerX" id="centerX"><br>
+	<label>Y: </label><input type="number" name="centerY" id="centerY"><br>
+	<label>Radious: </label><input type="number" name="radious" id="radious"><br>
+
+	<label>Please insert point parameters</label><br>
+	<label>A: </label><input type="number" name="pointA" id="pointA"><br>
+	<label>B: </label><input type="number" name="pointB" id="pointB"><br>
+
+	<button onclick="check()">Check</button><br>	
+	<label id="displayer"></label>
+
+	<script type="text/javascript">	
+
+		function check(){
+
+			var centerX = document.getElementById('centerX').value;
+			var centerY = document.getElementById('centerY').value;
+			var radious = document.getElementById('radious').value;
+			var pointA = document.getElementById('pointA').value;
+			var pointB = document.getElementById('pointB').value;
+
+			var dist_points = (pointA - centerX) * (pointA - centerX) + (pointB - centerY) * (pointB - centerY);
+
+			if(dist_points<radious){
+				document.getElementById("displayer").innerHTML = "Point[" + pointA + "," + pointB + "] lies inside the circle";					
+			}
+			else{					
+				document.getElementById("displayer").innerHTML = "Point[" + pointA + "," + pointB + "] lies outside the circle";	
+			}		
+		};		
+
+	</script>	
+
+</body>
+</html>  
