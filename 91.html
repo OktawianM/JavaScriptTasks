@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Largest number</title>
+	<meta name="description" content="Program to get the largest even number from an array of integers.">
+</head>
+<body>
+
+	<label> Please insert first number</label>
+	<input type="number" name="firstNo" id="firstNo"><br>
+	<label> Please insert second number</label>
+	<input type="number" name="secondNo" id="secondNo"><br>
+	<label> Please insert third number</label>
+	<input type="number" name="thirdNo" id="thirdNo"><br>
+	<button onclick="checkNumbers()">Check</button>
+
+	<script type="text/javascript">
+		function checkNumbers(){
+
+			var numbers = [document.getElementById("firstNo").value, document.getElementById("secondNo").value, document.getElementById("thirdNo").value];
+			
+			console.log("Highest number is: " + Math.max.apply(null, numbers));
+		}
+	</script>
+
+
+	
+
+</body>
+</html>
