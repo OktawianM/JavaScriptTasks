@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Removeing characters from string that appear more than once.</title>
+	<meta name="description" content="Program to remove all characters from a given string that appear more than once.">
+</head>
+<body>
+
+	<label>Please insert the string to modify</label>
+	<input type="string" name="inputedStr" id="inputedStr">
+	<button onclick="checkString()">Check</button>
+
+	<script type="text/javascript">
+		function checkString(){
+			var inputedValue = document.getElementById('inputedStr').value;
+			var arrValues = inputedValue.split("");
+			var resultArr = [];
+			
+
+			for(let i=0; i<arrValues.length; i++){	
+
+				if(inputedValue.indexOf(arrValues[i]) === inputedValue.lastIndexOf(arrValues[i])){
+					resultArr.push(arrValues[i]);
+				}
+
+				else{					
+					console.log("Removing " + arrValues[i]);
+				}			
+			}
+
+			resultArr.join("");
+			console.log(resultArr);			
+		}
+
+		
+
+	</script>
+
+
+</body>
+</html>
