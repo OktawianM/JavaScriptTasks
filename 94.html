@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Finding number of even digits in a given integer</title>
+	<meta name="description" content="Program to find the number of even digits in a given integer.">
+</head>
+<body>
+
+	<label>Please insert the number</label>
+	<input type="number" name="inputedNo" id="inputedNo">
+	<button onclick="findNumber()">Check</button>
+
+	<script type="text/javascript">
+		function findNumber(){
+			var inputedValue = document.getElementById('inputedNo').value;
+			var quantityOfDigits = 0;
+			
+			while(inputedValue){
+
+				quantityOfDigits += inputedValue%2 === 0;
+				inputedValue = Math.floor(inputedValue/10);
+			}
+
+
+			console.log("In given value " + inputedValue + " founded " + quantityOfDigits + " even digits.");	
+		}
+	</script>
+
+
+</body>
+</html>
