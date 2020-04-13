@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Smallest round number, not less than a given value</title>
+	<meta name="description" content="Program to find the smallest round number that is not less than a given value.">
+</head>
+<body>
+
+	<label>Please insert the number</label>
+	<input type="number" name="inputedNo" id="inputedNo">
+	<button onclick="findNumber()">Check</button>
+
+	<script type="text/javascript">
+		function findNumber(){
+			var inputedValue = document.getElementById('inputedNo').value;
+			
+			while(inputedValue%10 != 0){
+				inputedValue++;
+			}
+			console.log("The smallest round number that is not less than a given value is: " + inputedValue);	
+		}
+	</script>
+
+
+</body>
+</html>
