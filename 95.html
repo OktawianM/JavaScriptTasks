@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sums of prefix of the given array</title>
+	<meta name="description" content="Program to create an array of prefix sums of the given array.">
+</head>
+<body>
+
+	<label id="givenArray"></label>
+	<br>
+	<label id="arrayOfSums"></label>
+
+	<script type="text/javascript">
+		function sumPrefix(inputedArr){
+			var inputedArr = inputedArr;
+			var modifyiedArr=[];
+			var sum = 0;
+
+			for (let i = 0; i < inputedArr.length; i++) {				
+					sum += inputedArr[i];
+					modifyiedArr[i]=sum;
+				}
+
+				document.getElementById('givenArray').innerHTML = "Inputed array: " + inputedArr;	
+				document.getElementById('arrayOfSums').innerHTML = "Sums of array prefixes: " + modifyiedArr;		
+					
+		}
+		console.log(sumPrefix([1,2,3,4,5]));	
+	</script>
+
+
+</body>
+</html>
