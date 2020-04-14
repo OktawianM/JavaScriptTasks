@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Replacing all digits with # character.</title>
+	<meta name="description" content="Program to replace all digits in a string (should contains at least digit) with # character.">
+</head>
+<body>
+
+	<label>Please insert the string to modify</label>
+	<input type="string" name="inputedStr" id="inputedStr">
+	<button onclick="checkString()">Check</button>
+	<label id="displayer"></label>
+
+	<script type="text/javascript">
+		function checkString(){
+			var inputedValue = document.getElementById('inputedStr').value;		
+			var isAnyDigitHere = inputedValue.search(/[0-9]/);		
+
+			if(isAnyDigitHere == -1){
+				document.getElementById("displayer").innerHTML = "No digits found!";
+			}
+
+			else{
+				var modifyiedStr = inputedValue.replace(/[0-9]/g, '$');
+				document.getElementById("displayer").innerHTML = modifyiedStr;
+			}
+		}
+
+	</script>
+
+
+</body>
+</html>
